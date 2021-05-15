@@ -37,7 +37,7 @@ namespace WhiteBlog.API.Services
             foreach (var blog in blogs)
             {
                 // 擦除博客内容数据
-                blog.Body = "";
+                blog.Body = blog.Body.Split("\n")[0];
             }
 
             return blogs;
